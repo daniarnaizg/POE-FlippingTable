@@ -1,4 +1,4 @@
-@import url('//fonts.googleapis.com/css?family=Archivo');
+@import url('https://fonts.googleapis.com/css?family=Archivo');
 
 body {
 	/*background-image: url(https://orig00.deviantart.net/9db2/f/2018/223/7/c/path_of_exile__delve_by_chander_lieve-dcju5r1.jpg);*/
@@ -24,7 +24,8 @@ body {
 .main-area {
 	margin: 30px;
 	display: inline-block;
-	background-color: rgba(223, 230, 233, 0.6);
+	background-color: rgba(223, 230, 233, 0.3);
+	min-width: 50%;
 	max-width: 80%;
 	padding: 20px;
 	text-align: center;
@@ -32,11 +33,11 @@ body {
 }
 
 #exalted {
-	margin: 25px;
+	margin-top: 25px;
+	margin-bottom: 35px;
 	font-size: 30px;
 	font-weight: 600;
 	display: inline-block;
-	border-bottom: 1px solid #000;
 }
 
 #currency {
@@ -56,14 +57,19 @@ td, th {
 }
 
 #name {
-	text-align: left !important;
+	text-align: left;
 }
 
 #worth-yes {
-	background-color: rgba(0, 184, 148, 0.8);
+	background-color: rgba(0, 184, 148, 0.6);
 }
 
 #worth-no {
-	background-color: rgba(214, 48, 49, 0.5);
+	background-color: rgba(214, 48, 49, 0.6);
+}
+
+img[alt='icon'] {
+	margin: 5px;
+	vertical-align: middle;
 }
 
