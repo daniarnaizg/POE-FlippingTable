@@ -5,9 +5,11 @@ $.getJSON('https://cors-anywhere.herokuapp.com/https://poe.ninja/api/data/GetCur
 	var exIcon = data['currencyDetails'][1]['icon'];
 	var cIcon = data['currencyDetails'][0]['icon'];
 
-	  document.getElementById('exalted').innerHTML = "<span id='ex-bp'>1 <img src=" + exIcon + " alt='icon'> &#8594 " + exPrice + "<img src=" + cIcon + " alt='icon'></span>";
+	  // document.getElementById('exalted').innerHTML = "<span id='ex-bp'>1 <img src=" + exIcon + " alt='icon'> &#8594 " + exPrice + "<img src=" + cIcon + " alt='icon'></span>";
+	  document.getElementById('exalted').innerHTML = "<tr id='title'><th id='exName'><img src=" + exIcon + " alt='icon'>Exalted Orb - </th><th id='exValue'>" + exPrice + " chaos</th></tr>"
 
-	  document.getElementById('currency').innerHTML = "<tr id='title'><th id='name'>&nbsp</th><th id='bp'>PRICE</th><th id='ratio'>RATIO</th><th id='profit'>PROFIT/EX</th></tr>"
+
+	  document.getElementById('currency').innerHTML = "<tr><th id='ex'>&nbsp</th><th id='bp'>PRICE</th><th id='ratio'>RATIO</th><th id='profit'>PROFIT/EX</th></tr>"
 
 	  for (var i = 0; i < data['lines'].length; i++) {
 
@@ -17,12 +19,16 @@ $.getJSON('https://cors-anywhere.herokuapp.com/https://poe.ninja/api/data/GetCur
 	  		var icon_index = data['currencyDetails'][currencyId]['icon'];
 
 	  		var name = data['lines'][i]['currencyTypeName'];
-		  	var bp = data['lines'][i]['pay']['value'] * exPrice;
+		  	var bp = Math.round(data['lines'][i]['pay']['value'] * exPrice);
 		  	var ratio = data['lines'][i]['receive']['value'];
 		  	var ppex = bp * ratio - exPrice;
 
 	  	} catch(err){
 	  		console.log('Error con ' + name + '...');
+	  		continue;
+	  	}
+
+	  	if ( name == 'Exalted Orb' || bp <= 0 || ppex > exPrice/3) {
 	  		continue;
 	  	}
 	  						
@@ -32,6 +38,6 @@ $.getJSON('https://cors-anywhere.herokuapp.com/https://poe.ninja/api/data/GetCur
 	  		var id = 'worth-no';
 	  	}
 
-	  	document.getElementById('currency').innerHTML += "<tr id=" + id + "><th id='name'><img src=" + icon_index + " alt='icon'> " + name + "</th><th id='bp'>" + Math.round(bp) + "</th><th id='ratio'>" + ratio.toFixed(2) + "</th><th id='profit'>" + ppex.toFixed(2) + "</th></tr>"
+	  	document.getElementById('currency').innerHTML += "<tr id=" + id + "><th id='name'><img src=" + icon_index + " alt='icon'> " + name + "</th><th id='bp'>" + bp + "</th><th id='ratio'>" + ratio.toFixed(2) + "</th><th id='profit'>" + ppex.toFixed(2) + "</th></tr>"
 	  }
 });
