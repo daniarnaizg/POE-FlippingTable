@@ -1,5 +1,5 @@
-date = new Date().toJSON().slice(0,10).replace(/-/g,'-');
-$.getJSON('https://cors-anywhere.herokuapp.com/https://poe.ninja/api/data/GetCurrencyOverview?league=Delve&date=' + date, function(data) {
+// date = new Date().toJSON().slice(0,10).replace(/-/g,'-');
+$.getJSON('https://cors-anywhere.herokuapp.com/https://poe.ninja/api/data/GetCurrencyOverview?league=Delve&date=', function(data) {
 
 	var exPrice = Math.round(data['lines'][3]['chaosEquivalent']);
 	var exIcon = data['currencyDetails'][1]['icon'];
