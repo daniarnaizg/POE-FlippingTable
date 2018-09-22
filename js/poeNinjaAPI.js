@@ -32,6 +32,6 @@ $.getJSON('https://cors-anywhere.herokuapp.com/https://poe.ninja/api/data/GetCur
 	  		var id = 'worth-no';
 	  	}
 
-	  	document.getElementById('currency').innerHTML += "<tr id=" + id + "><th id='name'><img src=" + icon_index + " alt='icon'> " + name + "</th><th id='bp'>" + bp.toFixed(2) + "</th><th id='ratio'>" + ratio.toFixed(2) + "</th><th id='profit'>" + ppex.toFixed(2) + "</th></tr>"
+	  	document.getElementById('currency').innerHTML += "<tr id=" + id + "><th id='name'><img src=" + icon_index + " alt='icon'> " + name + "</th><th id='bp'>" + Math.round(bp) + "</th><th id='ratio'>" + ratio.toFixed(2) + "</th><th id='profit'>" + ppex.toFixed(2) + "</th></tr>"
 	  }
 });
