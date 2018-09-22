@@ -13,12 +13,16 @@ body {
 	text-align: center;
 }
 
-.titulo h1 {
+h1 {
 	color: #dfe6e9;
 	text-shadow: 2px 2px #636e72;
 	padding-top: 25px;
 	font-size: 50px;
 	font-weight: 1000; 
+}
+
+.league-banner {
+	align-self: center;
 }
 
 .main-area {
@@ -32,12 +36,22 @@ body {
 	border-radius: 15px;
 }
 
+tr, th {
+	font-weight: 300;
+	padding: 5px;
+	text-align: center;
+}
+
 #exalted {
-	margin-top: 25px;
-	margin-bottom: 35px;
-	font-size: 30px;
-	font-weight: 600;
-	display: inline-block;
+	box-shadow: 2px 2px rgba(99, 110, 114, 0.8);
+	padding-right: 8px;
+	display: table-cell;
+	font-size: 25px;
+	font-weight: 400;
+	border-radius: 12px;
+	border-collapse: collapse;
+	width: 100%;
+	background-color: rgba(253, 203, 110, 0.6);
 }
 
 #currency {
@@ -45,18 +59,7 @@ body {
 	width: 100%;
 }
 
-td, th {
-	font-weight: 300;
-	padding: 5px;
-	text-align: center;
-}
-
-#title {
-	font-size: 25px;
-	padding: 10px;
-}
-
-#name {
+#name, #exName {
 	text-align: left;
 }
 
@@ -72,4 +75,3 @@ img[alt='icon'] {
 	margin: 5px;
 	vertical-align: middle;
 }
-
