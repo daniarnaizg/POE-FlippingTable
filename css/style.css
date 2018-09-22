@@ -1,0 +1,67 @@
+body {
+	/*background-image: url(https://orig00.deviantart.net/9db2/f/2018/223/7/c/path_of_exile__delve_by_chander_lieve-dcju5r1.jpg);*/
+	background-image: url(../images/bg.jpg);
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	background-attachment: fixed;
+	overflow-y: scroll;
+	font-size: 20px;
+	font-family: Open Sans;
+	background-color: #fff;
+	text-align: center;
+}
+
+.titulo h1 {
+	color: #dfe6e9;
+	text-shadow: 2px 2px #636e72;
+	padding-top: 25px;
+	font-size: 50px;
+	font-weight: 1000; 
+}
+
+.main-area {
+	margin: 30px;
+	display: inline-block;
+	background-color: rgba(223, 230, 233, 0.6);
+	max-width: 80%;
+	padding: 20px;
+	text-align: center;
+	border-radius: 15px;
+}
+
+#exalted {
+	margin: 25px;
+	font-size: 30px;
+	font-weight: 600;
+	display: inline-block;
+	border-bottom: 1px solid #000;
+}
+
+#currency {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td, th {
+	font-weight: 300;
+	padding: 5px;
+	text-align: center;
+}
+
+#title {
+	font-size: 25px;
+	padding: 10px;
+}
+
+#name {
+	text-align: left !important;
+}
+
+#worth-yes {
+	background-color: rgba(0, 184, 148, 0.8);
+}
+
+#worth-no {
+	background-color: rgba(214, 48, 49, 0.5);
+}
+
