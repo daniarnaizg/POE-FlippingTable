@@ -1,7 +1,8 @@
 // date = new Date().toJSON().slice(0,10).replace(/-/g,'-');
-$.getJSON('https://cors-anywhere.herokuapp.com/https://poe.ninja/api/data/GetCurrencyOverview?league=Delve&date=', function(data) {
+// $.getJSON('https://cors-anywhere.herokuapp.com/https://poe.ninja/api/data/GetCurrencyOverview?league=Delve&date=', function(data) {
+$.getJSON('https://cors-escape.herokuapp.com/https://poe.ninja/api/data/GetCurrencyOverview?league=Betrayal&date=', function(data) {
 
-	var exPrice = Math.round(data['lines'][3]['chaosEquivalent']);
+	var exPrice = Math.round(data['lines'][4]['chaosEquivalent']);
 	var exIcon = data['currencyDetails'][1]['icon'];
 	var cIcon = data['currencyDetails'][0]['icon'];
 
@@ -9,7 +10,7 @@ $.getJSON('https://cors-anywhere.herokuapp.com/https://poe.ninja/api/data/GetCur
 	  document.getElementById('exalted').innerHTML = "<tr id='title'><th id='exName'><img src=" + exIcon + " alt='icon'>Exalted Orb - </th><th id='exValue'>" + exPrice + " chaos</th></tr>"
 
 
-	  document.getElementById('currency').innerHTML = "<tr><th id='ex'>&nbsp</th><th id='bp'>PRICE</th><th id='ratio'>RATIO</th><th id='profit'>PROFIT/EX</th></tr>"
+	  document.getElementById('currency').innerHTML = "<tr><td id='ex'>&nbsp</td><td id='bp'>PRICE</td><td id='ratio'>RATIO</td><td id='profit'>PROFIT/EX</td></tr>"
 
 	  for (var i = 0; i < data['lines'].length; i++) {
 
