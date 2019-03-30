@@ -4,12 +4,12 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="js/poeNinjaAPI.js"></script>
+	<link rel="icon" type="image/png" href="images/icon.png"" sizes="64x64">
 	<title>Path of Flipping</title>
 </head>
 <body>
-	<!-- <h1>Path of Flipping</h1> -->
 	<div class='league-banner'>
-		<img src="images/league_logo.png">
+		<img src="images/header.png" alt="header">
 	</div>
 	<div class='main-area'>
 		<div id='exalted'>
@@ -19,41 +19,5 @@
 			</table>
 		</div>
 	</div>
-	<script type="text/javascript">
-	    var table = $('table');
-    
-    	$('#profit')
-    	    .wrapInner('<span title="sort this column"/>')
-    	    .each(function(){
-    	        
-    	        var th = $(this),
-    	            thIndex = th.index(),
-    	            inverse = false;
-    	        
-    	        th.click(function(){
-    	            
-    	            table.find('td').filter(function(){
-    	                
-    	                return $(this).index() === thIndex;
-    	                
-    	            }).sortElements(function(a, b){
-    	                
-    	                return $.text([a]) > $.text([b]) ?
-    	                    inverse ? -1 : 1
-    	                    : inverse ? 1 : -1;
-    	                
-    	            }, function(){
-    	                
-    	                // parentNode is the element we want to move
-    	                return this.parentNode; 
-    	                
-    	            });
-    	            
-    	            inverse = !inverse;
-    	                
-    	        });
-    	            
-    	    });
-	</script>
 </body>
 </html>
