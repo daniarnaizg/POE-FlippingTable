@@ -80,3 +80,22 @@ img[alt='header'] {
 	vertical-align: middle;
 	height: 220px;
 }
+
+a:link, a:visited {
+	color: black;
+	font-size: 10px;
+	padding: 5px 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin-bottom: 5px;
+  }
+
+a[id='buy-button']{
+	margin-left: 25px;
+	background-color: rgba(53, 241, 46, 0.616);
+}
+a[id='sell-button']{
+	margin-left: 2px;
+	background-color: rgba(231, 23, 23, 0.753);
+}
