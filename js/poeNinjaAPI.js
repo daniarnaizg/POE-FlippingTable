@@ -68,7 +68,7 @@ $.getJSON('https://cors-anywhere.herokuapp.com/https://poe.ninja/api/data/GetCur
 
 	document.getElementById('exalted').innerHTML = "<tr id='title'><th id='exName'><img src=" + exIcon + " alt='icon'>Exalted Orb - </th><th id='exValue'>" + exPrice + " chaos</th></tr>"
 
-	document.getElementById('currency').innerHTML = "<tr><td id='ex'>&nbsp</td><td id='bp'>PRICE</td><td id='ratio'>RATIO</td><td id='profit'>PROFIT/EX</td></tr>"
+	document.getElementById('currency').innerHTML = "<tr><td id='ex'>&nbsp</td><td id='buysell'>&nbsp</td><td id='bp'>PRICE</td><td id='ratio'>RATIO</td><td id='profit'>PROFIT/EX</td></tr>"
 
 	var currList = [];
 	for (var i = 0; i < data['lines'].length; i++) {
@@ -112,7 +112,7 @@ $.getJSON('https://cors-anywhere.herokuapp.com/https://poe.ninja/api/data/GetCur
 	currList = currList.sort(Comparator);
 
 	for (var i = 0; i < currList.length; i++) {
-		document.getElementById('currency').innerHTML += "<tr id=" + currList[i][5] + "><th id='name'><img src=" + currList[i][0] + " alt='icon'> " + currList[i][1] + "<a id='buy-button' href='http://currency.poe.trade/search?league=" + leagueName + "&online=x&want=" + 6 + "&have=" + currDict[currList[i][1]] + "'target='_blank'>BUY</a><a id='sell-button' href='http://currency.poe.trade/search?league=" + leagueName + "&online=x&want=" + currDict[currList[i][1]] + "&have=" + 4 + "'target='_blank'>SELL</a></th><th id='bp'>" + currList[i][2] + "</th><th id='ratio'>" + currList[i][3].toFixed(2) + "</th><th id='profit'>" + currList[i][4].toFixed(2) + "</th></tr>"
+		document.getElementById('currency').innerHTML += "<tr id=" + currList[i][5] + "><th id='name'><img src=" + currList[i][0] + " alt='icon'> " + currList[i][1] + "<th id='buysell'><a id='buy-button' href='http://currency.poe.trade/search?league=" + leagueName + "&online=x&want=" + 6 + "&have=" + currDict[currList[i][1]] + "'target='_blank'>BUY</a><a id='sell-button' href='http://currency.poe.trade/search?league=" + leagueName + "&online=x&want=" + currDict[currList[i][1]] + "&have=" + 4 + "'target='_blank'>SELL</a></th></th><th id='bp'>" + currList[i][2] + "</th><th id='ratio'>" + currList[i][3].toFixed(2) + "</th><th id='profit'>" + currList[i][4].toFixed(2) + "</th></tr>"
 	}
 
 });
