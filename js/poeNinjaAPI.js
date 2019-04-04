@@ -112,7 +112,7 @@ $.getJSON('https://cors.io/?https://poe.ninja/api/data/GetCurrencyOverview?leagu
 	currList = currList.sort(Comparator);
 
 	for (var i = 0; i < currList.length; i++) {
-		document.getElementById('currency').innerHTML += "<tr id=" + currList[i][5] + "><th id='name'><img src=" + currList[i][0] + " alt='icon'> " + currList[i][1] + "<th id='buysell'><a id='buy-button' href='http://currency.poe.trade/search?league=" + leagueName + "&online=x&want=" + 6 + "&have=" + currDict[currList[i][1]] + "'target='_blank'>BUY</a><a id='sell-button' href='http://currency.poe.trade/search?league=" + leagueName + "&online=x&want=" + currDict[currList[i][1]] + "&have=" + 4 + "'target='_blank'>SELL</a></th></th><th id='bp'>" + currList[i][2] + "</th><th id='ratio'>" + currList[i][3].toFixed(2) + "</th><th id='profit'>" + currList[i][4].toFixed(2) + "</th></tr>"
+		document.getElementById('currency').innerHTML += "<tr id=" + currList[i][5] + "><th id='name'><img src=" + currList[i][0] + " alt='icon'> " + currList[i][1] + "<th id='buysell'><a id='buy-button' href='http://currency.poe.trade/search?league=Synthesis&online=x&want=" + 6 + "&have=" + currDict[currList[i][1]] + "'target='_blank'>BUY</a><a id='sell-button' href='http://currency.poe.trade/search?league=Synthesis&online=x&want=" + currDict[currList[i][1]] + "&have=" + 4 + "'target='_blank'>SELL</a></th></th><th id='bp'>" + currList[i][2] + "</th><th id='ratio'>" + currList[i][3].toFixed(2) + "</th><th id='profit'>" + currList[i][4].toFixed(2) + "</th></tr>"
 	}
 
 });
