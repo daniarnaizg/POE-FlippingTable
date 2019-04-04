@@ -1,6 +1,6 @@
 
 let leagueName;
-$.getJSON("https://cors-anywhere.herokuapp.com/https://api.poe.watch/leagues", function (data) {
+$.getJSON("https://cors.io/?https://api.poe.watch/leagues", function (data) {
 	leagueName = data[3]['name'];
 	console.log(leagueName)
 });
@@ -60,9 +60,9 @@ function Comparator(a, b) {
 	return 0;
 }
 
-$.getJSON('https://cors-anywhere.herokuapp.com/https://poe.ninja/api/data/GetCurrencyOverview?league=Synthesis', function (data) {
+$.getJSON('https://cors.io/?https://poe.ninja/api/data/GetCurrencyOverview?league=Synthesis', function (data) {
 
-	var exPrice = Math.round(data['lines'][3]['chaosEquivalent']);
+	var exPrice = Math.round(data['lines'][2]['chaosEquivalent']);
 	var exIcon = data['currencyDetails'][1]['icon'];
 	var cIcon = data['currencyDetails'][0]['icon'];
 
