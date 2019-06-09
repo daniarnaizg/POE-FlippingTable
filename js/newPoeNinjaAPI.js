@@ -60,7 +60,7 @@ function Comparator(a, b) {
 	return 0;
 }
 
-$.getJSON('https://cors.io/?https://api.poe.watch/get?league=Synthesis&category=currency', function (data) {
+$.getJSON('https://cors.io/?https://api.poe.watch/get?league=Legion&category=currency', function (data) {
 
 	var exPrice = Math.round(data[10]['median']);
 	var exIcon = data[10]['icon'];
